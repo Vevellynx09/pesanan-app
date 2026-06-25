@@ -1,0 +1,25 @@
+{
+  "name": "pesanan-customer-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "seed": "node scripts/seed.js",
+    "wipe-parts": "node scripts/wipe-part-numbers.js",
+    "wipe-all": "node scripts/wipe-all.js"
+  },
+  "dependencies": {
+    "next": "14.2.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "firebase": "10.12.4",
+    "xlsx": "0.18.5",
+    "lucide-react": "0.383.0"
+  },
+  "devDependencies": {
+    "firebase-admin": "12.3.0"
+  }
+}

@@ -1,0 +1,30 @@
+rules_version = '2';
+
+// Hanya ada satu peran di sistem ini: admin. Siapa pun yang berhasil
+// login (Firebase Authentication) dianggap admin dan boleh membaca/
+// menulis seluruh data. Akun admin dibuat manual lewat Firebase Console,
+// jadi tidak ada pendaftaran sendiri (self sign-up) di aplikasi ini.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isAdmin() {
+      return request.auth != null;
+    }
+
+    match /orders/{orderId} {
+      allow read, write: if isAdmin();
+    }
+
+    match /partNumbers/{partId} {
+      allow read, write: if isAdmin();
+    }
+
+    match /masterData/{docId} {
+      allow read, write: if isAdmin();
+    }
+
+    match /_meta/{docId} {
+      allow read, write: if isAdmin();
+    }
+  }
+}
