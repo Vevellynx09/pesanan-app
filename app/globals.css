@@ -546,6 +546,18 @@ button {
   outline: none;
 }
 
+.date-range-filter {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.date-range-filter .input {
+  padding: 7px 8px;
+  font-size: 12.5px;
+}
+
 /* ---------------- Table ---------------- */
 .table-wrap {
   overflow-x: auto;
