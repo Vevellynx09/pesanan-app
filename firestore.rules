@@ -23,6 +23,10 @@ service cloud.firestore {
       allow read, write: if isAdmin();
     }
 
+    match /notaXA/{docId} {
+      allow read, write: if isAdmin();
+    }
+
     match /_meta/{docId} {
       allow read, write: if isAdmin();
     }

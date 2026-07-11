@@ -9,12 +9,14 @@ import {
   FileSpreadsheet,
   LogOut,
   Anchor,
+  FileText,
 } from "lucide-react";
 import { useAuth } from "@/lib/AuthContext";
 
 const NAV = [
   { href: "/", label: "Beranda", icon: LayoutDashboard },
   { href: "/pesanan", label: "Pesanan Customer", icon: ClipboardList },
+  { href: "/nota-xa", label: "Nota XA", icon: FileText },
   { href: "/master-data", label: "Master Data", icon: Settings2 },
   { href: "/import-export", label: "Import / Export", icon: FileSpreadsheet },
 ];
